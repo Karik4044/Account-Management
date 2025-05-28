@@ -1,0 +1,264 @@
+/* button.css */
+
+/* Default style for btndashboard */
+#btndashboard {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #FFFFFF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "System";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+/* Hover style for btndashboard */
+#btndashboard:hover {
+    -fx-background-color: #333333; /* Dark gray background on hover */
+    -fx-text-fill: #FFFFFF; /* Keep text white */
+    -fx-scale-x: 1.05; /* Slight scale effect */
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2); /* Subtle shadow */
+}
+
+/* Default style for btnuser */
+#btnuser {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #FFFFFF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+/* Hover style for btnuser */
+#btnuser:hover {
+    -fx-background-color: #333333; /* Dark gray background on hover */
+    -fx-text-fill: #FFFFFF; /* Keep text white */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* Default style for btnprofile */
+#btnprofile {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #FFFFFF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+/* Hover style for btnprofile */
+#btnprofile:hover {
+    -fx-background-color: #333333; /* Dark gray background on hover */
+    -fx-text-fill: #FFFFFF; /* Keep text white */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* Default style for btnRegister */
+#btnRegister {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #FFFFFF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+/* Hover style for btnRegister */
+#btnRegister:hover {
+    -fx-background-color: #000000; /* Dark gray background on hover */
+    -fx-text-fill: #FFFFFF; /* Keep text white */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* Default style for btnLogin */
+#btnLogin {
+    -fx-background-color: #FF8600; /* Orange background from FXML */
+    -fx-background-radius: 15;
+    -fx-text-fill: black; /* Default text color */
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+/* Hover style for btnLogin */
+#btnLogin:hover {
+    -fx-background-color: #FFA500; /* Lighter orange for hover */
+    -fx-text-fill: #FFFFFF; /* White text for contrast */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* Default style for btnLogout */
+#btnLogout {
+    -fx-background-color: #FF0000; /* Red background from FXML */
+    -fx-background-radius: 15;
+    -fx-text-fill: white; /* White text from FXML */
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+#btnLogout:hover {
+    -fx-background-color: #CC0000; /* Darker red for hover */
+    -fx-text-fill: #FFFFFF; /* Keep white text */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.btnShowhide {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px;
+}
+.btnShowhide:hover {
+    -fx-scale-x: 1.20; /* Slight scale-up effect */
+    -fx-scale-y: 1.20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 1); /* Shadow effect */
+}
+
+.buttonoke {
+    -fx-background-color: #00CC00;
+    -fx-background-radius: 15px;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+.buttonoke:hover {
+    -fx-background-color: #00FF00; /* Darker green for hover */
+    -fx-text-fill: #FFFFFF; /* White text for contrast */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.btnBack {
+    -fx-background-color: #787878; /* Orange background from FXML */
+    -fx-background-radius: 15;
+    -fx-text-fill: #ffffff; /* Default text color */
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+.btnBack:hover {
+    -fx-background-color: #ffffff; /* Lighter orange for hover */
+    -fx-text-fill: #000000; /* White text for contrast */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.btnforgot {
+    -fx-background-color: #850000;
+    -fx-background-radius: 15;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+.btnforgot:hover {
+    -fx-background-color: #FF0000; /* Lighter red for hover */
+    -fx-text-fill: #FFFFFF; /* White text for contrast */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.btninsert {
+    -fx-background-color: #3399FF; /* Green background */
+    -fx-background-radius: 15;
+    -fx-text-fill: black; /* Default text color */
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+.btninsert:hover {
+    -fx-background-color: #66CCFF; /* Lighter green for hover */
+    -fx-text-fill: #FFFFFF; /* White text for contrast */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.btnclear {
+    -fx-background-color:  #FF99FF; /* Red background */
+    -fx-background-radius: 15;
+    -fx-text-fill: black; /* Default text color */
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+.btnclear:hover {
+    -fx-background-color: #FFCCFF; /* Lighter red for hover */
+    -fx-text-fill: #FFFFFF; /* White text for contrast */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.btnupdate {
+    -fx-background-color:  #33CC66; /* Yellow background */
+    -fx-background-radius: 15;
+    -fx-text-fill: black; /* Default text color */
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+.btnupdate:hover {
+    -fx-background-color: #66FF99; /* Lighter yellow for hover */
+    -fx-text-fill: #FFFFFF; /* White text for contrast */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.btnprofile {
+    -fx-background-color: #ff6600; /* Orange background */
+    -fx-background-radius: 15;
+    -fx-text-fill: #ffffff; /* Default text color */
+    -fx-font-weight: bold;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 12;
+    -fx-cursor: hand;
+}
+
+.btnprofile:hover {
+    -fx-background-color: #FFB266; /* Lighter orange for hover */
+    -fx-text-fill: #ffffff; /* Black text for contrast */
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}

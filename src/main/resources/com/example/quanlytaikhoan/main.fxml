@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="475.0" prefWidth="1264.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quanlytaikhoan.controllers.MainController">
+   <children>
+      <AnchorPane fx:id="Switch" layoutX="282.0" prefHeight="508.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Pane fx:id="OperationPane" prefHeight="510.0" prefWidth="282.0" style="-fx-background-color: #333333;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="23.0" prefHeight="54.0" prefWidth="256.0" style="-fx-border-color: #ffffff; -fx-border-radius: 2em;" styleClass="highlighted" text="User account management" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="18.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Label>
+                  <VBox layoutX="94.0" layoutY="113.0" prefHeight="181.0" prefWidth="150.0" spacing="15.0">
+                     <children>
+                        <TextField fx:id="IDTextField" prefHeight="45.0" prefWidth="169.0" promptText="Username ID" style="-fx-background-radius: 15px;" />
+                        <TextField fx:id="UsernameTextField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="170.0" promptText="Enter New Userman" style="-fx-background-radius: 15px;" />
+                        <PasswordField fx:id="PasswordTextField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="138.0" promptText="Enter New Password" style="-fx-background-radius: 15px;" />
+                        <TextField fx:id="MailTextField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="170.0" promptText="Enter New Mail" style="-fx-background-radius: 15px;" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="72.0" layoutY="113.0" prefHeight="26.0" prefWidth="19.0" text="ID:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="159.0" text="Username:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="212.0" text="Password:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="56.0" layoutY="264.0" text="Mail:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnDelete" layoutX="23.0" layoutY="426.0" mnemonicParsing="false" onAction="#DeleteButton" prefHeight="30.0" prefWidth="66.0" styleClass="btnforgot" stylesheets="@Style/button.css" text="DELETE" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER" layoutX="25.0" layoutY="341.0" prefHeight="30.0" prefWidth="232.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="Insert" mnemonicParsing="false" onAction="#InsertAccount" prefHeight="30.0" prefWidth="66.0" styleClass="btninsert" stylesheets="@Style/button.css" text="INSERT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnClear1" mnemonicParsing="false" onAction="#clearbutton" prefHeight="30.0" prefWidth="66.0" styleClass="btnclear" stylesheets="@Style/button.css" text="CLEAR" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="UpdateButton" mnemonicParsing="false" onAction="#updatebutton" prefHeight="30.0" prefWidth="66.0" styleClass="btnupdate" stylesheets="@Style/button.css" text="UPDATE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="DeleteTextField" layoutX="105.0" layoutY="426.0" prefHeight="30.0" promptText="Enter User ID" style="-fx-background-radius: 15;" />
+               </children>
+            </Pane>
+            <StackPane fx:id="Stackmainpane" prefHeight="510.0" prefWidth="982.0">
+               <children>
+                  <Pane fx:id="LoginPane" prefHeight="506.0" prefWidth="667.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <AnchorPane fx:id="contentPane12" prefHeight="500.0" prefWidth="700.0">
+                           <children>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="982.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-radius: 2em; -fx-border-width: 3px;" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-282.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox layoutX="406.0" layoutY="191.0" prefHeight="110.0" prefWidth="170.0" spacing="15.0">
+                                       <children>
+                                          <TextField fx:id="usernameLogin" prefHeight="36.0" prefWidth="170.0" promptText="Enter Username" style="-fx-background-radius: 15px;" />
+                                          <PasswordField fx:id="passwordLogin" prefHeight="37.0" prefWidth="170.0" promptText="Enter Password" style="-fx-background-radius: 15px;" />
+                                          <TextField fx:id="passwordLoginText" managed="false" prefHeight="37.0" prefWidth="170.0" promptText="Enter Password" style="-fx-background-radius: 15px;" visible="false" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="18.0" prefWidth="176.0" text="No account?" textFill="WHITE" />
+                                                <Label fx:id="ButtontoRegister" accessibleRole="BUTTON" contentDisplay="CENTER" prefHeight="18.0" prefWidth="170.0" text="Create one!" textFill="DODGERBLUE" underline="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0" spacing="15.0">
+                                             <children>
+                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#okLogin" styleClass="buttonoke" stylesheets="@Style/button.css" text="OK">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Back" styleClass="btnBack" stylesheets="@Style/button.css" text="Back">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" layoutX="306.0" layoutY="189.0" prefHeight="193.0" prefWidth="100.0" spacing="15.0">
+                                       <children>
+                                          <Label text="Username" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Password" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <Label fx:id="LoginLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="185.0" layoutY="415.0" prefHeight="27.0" prefWidth="611.0" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="443.0" layoutY="110.0" text="Login" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="429.0" layoutY="369.0" mnemonicParsing="false" onAction="#ButtonForgotPassword" prefHeight="26.0" prefWidth="123.0" styleClass="btnforgot" stylesheets="@Style/button.css" text="Forgot Password?" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="576.0" layoutY="230.0" mnemonicParsing="false" onAction="#showhide" prefHeight="30.0" prefWidth="25.0" styleClass="btnShowhide" stylesheets="@Style/button.css">
+                                       <graphic>
+                                          <ImageView fx:id="showhideicon" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../view.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="RegisterPane" prefHeight="506.0" prefWidth="667.0">
+                     <children>
+                        <AnchorPane fx:id="contentPane111" prefHeight="510.0" prefWidth="702.0">
+                           <children>
+                              <AnchorPane prefHeight="510.0" prefWidth="982.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-radius: 2em; -fx-border-width: 3px;">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="406.0" layoutY="185.0" prefHeight="110.0" prefWidth="170.0" spacing="15.0">
+                                       <children>
+                                          <TextField fx:id="RegisterUserNameTextField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="170.0" promptText="Enter Username" style="-fx-background-radius: 15px;" />
+                                          <TextField fx:id="RegisterEmailTextField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="170.0" promptText="Enter Email@example.com" style="-fx-background-radius: 15px;" />
+                                          <PasswordField fx:id="RegisterPasswordField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="170.0" promptText="Enter Password" style="-fx-background-radius: 15px;" />
+                                          <TextField fx:id="RegisterPasswordTextField" managed="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="170.0" promptText="Enter Password" style="-fx-background-radius: 15px;" visible="false" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Label text="Already have an account?" textFill="WHITE" />
+                                                <Label fx:id="ButtontoLogin" accessibleRole="BUTTON" prefHeight="18.0" prefWidth="34.0" text="Login" textFill="DODGERBLUE" underline="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="66.0" prefWidth="170.0" spacing="15.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#okeregister" styleClass="buttonoke" stylesheets="@Style/button.css" text="OK">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onAction="#Back" styleClass="btnBack" stylesheets="@Style/button.css" text="Back">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" layoutX="306.0" layoutY="185.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                                       <children>
+                                          <Label text="Username" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Mail" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Password" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <Label fx:id="RegistedLabel" alignment="CENTER" layoutX="178.0" layoutY="422.0" prefHeight="27.0" prefWidth="626.0" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="421.0" layoutY="100.0" text="Register" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="576.0" layoutY="293.0" mnemonicParsing="false" onAction="#showhide" prefHeight="30.0" prefWidth="25.0" styleClass="btnShowhide" stylesheets="@Style/button.css">
+                                       <graphic>
+                                          <ImageView fx:id="showhideicon1" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../view.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="AccountListPane" prefHeight="508.0" prefWidth="422.0">
+                     <children>
+                        <AnchorPane fx:id="UserListManage" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #000000;">
+                           <children>
+                              <Pane layoutX="279.0" prefHeight="132.0" prefWidth="702.0" style="-fx-background-color: #212631;">
+                                 <children>
+                                    <Label layoutX="282.0" layoutY="31.0" text="Account List" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="InsertLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="86.0" prefHeight="17.0" prefWidth="282.0" textAlignment="CENTER" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="SearchTextField" layoutX="14.0" layoutY="82.0" prefHeight="25.0" prefWidth="170.0" promptText="Enter Id or Username or mail" style="-fx-background-radius: 15;" />
+                                    <Button layoutX="184.0" layoutY="80.0" mnemonicParsing="false" onAction="#showhideAc" prefHeight="30.0" prefWidth="25.0" styleClass="btnShowhide" stylesheets="@Style/button.css">
+                                       <graphic>
+                                          <ImageView fx:id="showhideiconAc" fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../view.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <AnchorPane layoutY="106.0" prefHeight="200.0" prefWidth="534.0">
+                                 <children>
+                                    <TableView fx:id="userListTable" layoutX="280.0" layoutY="24.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="702.0" AnchorPane.bottomAnchor="-152.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="-448.0" AnchorPane.topAnchor="24.0">
+                                       <columns>
+                                          <TableColumn fx:id="IdCollum" prefWidth="36.79998815059662" text="ID" />
+                                          <TableColumn fx:id="UsernameCollum" prefWidth="208.7999267578125" text="Username" />
+                                          <TableColumn fx:id="PasswordCollum" prefWidth="120.0" text="Password" />
+                                          <TableColumn fx:id="MailCollum" prefWidth="336.00006103515625" text="Mail" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="AdminUser" layoutX="282.0" layoutY="325.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="700.0">
+                                 <columns>
+                                    <TableColumn fx:id="IdCollummAdmin" prefWidth="36.79998815059662" text="ID" />
+                                    <TableColumn fx:id="UsernameCollumAdmin" prefWidth="208.7999267578125" text="Username" />
+                                    <TableColumn fx:id="PasswordCollumAdmin" prefWidth="200.00006103515625" text="Password" />
+                                    <TableColumn fx:id="MailCollumAdmin" prefWidth="256.79998779296875" text="Mail" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="MainPane" prefHeight="674.0" prefWidth="982.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label fx:id="NameUser" alignment="CENTER" contentDisplay="CENTER" layoutX="224.0" layoutY="32.0" prefHeight="53.0" prefWidth="534.0" style="-fx-background-radius: 30; -fx-background-color: linear-gradient(to right, #0C0C0C, #756213);" text="User account management" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="NotifyLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="356.0" layoutY="431.0" prefHeight="18.0" prefWidth="270.0" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="282.0" fitWidth="414.0" layoutX="350.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../6405024.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="UpdateLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="406.0" layoutY="459.0" prefHeight="18.0" prefWidth="170.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="508.0" prefWidth="281.0" style="-fx-background-color: #454545;">
+         <children>
+            <Pane fx:id="PanetoLogout" layoutX="32.0" layoutY="312.0" prefHeight="108.0" prefWidth="214.0" style="-fx-background-color: d62828; -fx-background-radius: 15;">
+               <children>
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="30.0" prefHeight="17.0" prefWidth="194.0" text="Are you sure you want to logout?" textFill="#eae2b7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="18.0" layoutY="56.0" prefHeight="38.0" prefWidth="179.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#OutClickYes" style="-fx-background-color: fcbf49;" styleClass="btnforgot" stylesheets="@Style/button.css" text="Yes">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button id="btnprofile" alignment="CENTER" mnemonicParsing="false" onAction="#OutClickNo" stylesheets="@Style/button.css" text="No">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <StackPane prefHeight="509.0" prefWidth="282.0">
+               <children>
+                  <Pane fx:id="functionpane" prefHeight="506.0" prefWidth="282.0" style="-fx-background-color: #000000;">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutY="-39.0" prefHeight="240.0" prefWidth="270.0">
+                                 <children>
+                                    <Label fx:id="Rolepanel" alignment="CENTER" contentDisplay="CENTER" layoutX="89.0" layoutY="66.0" prefHeight="20.0" prefWidth="90.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="91.0" fitWidth="139.0" layoutX="89.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../account-white-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="WelcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="167.0" prefHeight="34.0" prefWidth="123.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="NameUser1" alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="207.0" prefHeight="18.0" prefWidth="113.0" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <GridPane alignment="CENTER" layoutX="34.0" layoutY="368.0" prefHeight="132.0" prefWidth="214.0" vgap="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="214.8" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.00001525878906" minWidth="0.0" prefWidth="0.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="10.400000000000002" minHeight="0.0" prefHeight="10.400000000000002" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="22.8" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="71.4" minHeight="10.0" prefHeight="31.79998779296875" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="63.4000244140625" minHeight="0.0" prefHeight="38.20001220703125" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="63.4000244140625" minHeight="0.0" prefHeight="51.79998779296875" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="63.4000244140625" minHeight="0.0" prefHeight="51.79998779296875" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="96.79999999999998" minHeight="10.0" prefHeight="46.39997558593748" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="btnRegister" alignment="CENTER" mnemonicParsing="false" onAction="#HandleClicks" prefHeight="69.0" prefWidth="214.0" styleClass="btnRegister" stylesheets="@Style/button.css" text="REGISTER" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#HandleClicks" prefHeight="52.0" prefWidth="215.0" styleClass="btnLogout" stylesheets="@Style/button.css" text="LOGOUT" textFill="WHITE" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnLogin" alignment="CENTER" mnemonicParsing="false" onAction="#HandleClicks" prefHeight="65.0" prefWidth="226.0" styleClass="btnLogin" stylesheets="@Style/button.css" text="LOGIN" textAlignment="CENTER" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </GridPane>
+                        <Line endX="135.4000244140625" endY="1.52587890625E-5" layoutX="135.0" layoutY="412.0" startX="-123.00001525878906" startY="1.52587890625E-5" stroke="WHITE" />
+                        <VBox fx:id="Vboxfunc" layoutX="34.0" layoutY="201.0" prefHeight="200.0" prefWidth="214.0" spacing="5.0">
+                           <children>
+                              <Button fx:id="btndashboard" alignment="CENTER" mnemonicParsing="false" onAction="#HandleClicks" prefHeight="27.0" prefWidth="280.0" styleClass="btndashboard" stylesheets="@Style/button.css" text="Dashboard" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnuser" alignment="CENTER" mnemonicParsing="false" onAction="#HandleClicks" prefHeight="27.0" prefWidth="280.0" styleClass="btnuser" stylesheets="@Style/button.css" text="User" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnprofile" alignment="CENTER" mnemonicParsing="false" onAction="#HandleClicks" prefHeight="27.0" prefWidth="280.0" styleClass="btnprofile" stylesheets="@Style/button.css" text="User Profile" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

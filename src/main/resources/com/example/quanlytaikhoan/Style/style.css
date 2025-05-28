@@ -1,0 +1,53 @@
+/* Style cho toàn bộ TableView */
+.rounded-table {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 5;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+    -fx-background-color: #f9f9f9; /* Thêm màu nền cho bảng */
+}
+
+/* Style cho header của TableView */
+.rounded-table .column-header-background {
+    -fx-background-color: rgb(255, 255, 255); /* Màu nền header */
+}
+
+.rounded-table .column-header {
+    -fx-background-color: #ff7f29;
+}
+
+/* Style cho tiêu đề cột */
+.rounded-table .column-header .label {
+    -fx-font-weight: bold;   /* Chữ in đậm */
+    -fx-text-fill: #eae7e7;      /* Màu chữ */
+    -fx-font-size: 14px;      /* Kích thước chữ */
+}
+
+/* Style cho các cell trong TableView */
+.rounded-table .table-cell {
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold; /* Chữ in đậm */
+    -fx-background-color: white;  /* Màu nền ô */
+    -fx-border-color: transparent transparent #ddd transparent; /* Viền dưới */
+    -fx-border-width: 0 0 1px 0;  /* Viền dưới */
+}
+
+/* Hiệu ứng hover khi di chuột qua các cell */
+.rounded-table .table-cell:hover {
+    -fx-background-color: gray; /* Màu nền khi hover */
+    -fx-text-fill: white; /* Màu chữ khi hover */
+}
+
+/* background color cho cell*/
+.rounded-table .table-row-cell:filled {
+    -fx-background-color: #f0f0f0; /* Màu nền cho các cell */
+}
+
+/* Đổi màu cell được select */
+.rounded-table .table-row-cell:selected .table-cell{
+    -fx-background-color: #007bff; /* Màu nền khi chọn */
+    -fx-text-fill: white;          /* Màu chữ khi chọn */
+}
+

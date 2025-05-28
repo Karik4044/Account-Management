@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Switch1" prefHeight="508.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quanlytaikhoan.controllers.Dashboardcontroller">
+   <children>
+      <StackPane prefHeight="510.0" prefWidth="982.0">
+         <children>
+            <Pane fx:id="dashboardpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #696969;">
+               <children>
+                  <Rectangle arcHeight="35.0" arcWidth="35.0" fill="DODGERBLUE" height="200.0" layoutX="50.0" layoutY="39.0" stroke="TRANSPARENT" strokeType="INSIDE" width="259.0" />
+                  <BarChart fx:id="dailychart" layoutX="632.0" layoutY="275.0" prefHeight="200.0" prefWidth="308.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15px;" title="Daily account created">
+                     <xAxis>
+                        <CategoryAxis label="Date" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis label="Accounts" side="LEFT" />
+                     </yAxis>
+                  </BarChart>
+                  <LineChart fx:id="totalchart" layoutX="632.0" layoutY="39.0" prefHeight="201.0" prefWidth="308.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15px;" title="Total Accounts">
+                     <xAxis>
+                        <CategoryAxis label="Date" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis label="Accounts" side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+                  <TableView fx:id="recenttable" layoutX="50.0" layoutY="275.0" prefHeight="200.0" prefWidth="557.0" styleClass="rounded-table" stylesheets="@Style/style.css">
+                     <columns>
+                        <TableColumn fx:id="recentusername" prefWidth="270.3999938964844" styleClass="rounded-table" text="Username" />
+                        <TableColumn fx:id="date" prefWidth="273.5999755859375" styleClass="rounded-table" text="Date" />
+                     </columns>
+                  </TableView>
+                  <Rectangle arcHeight="35.0" arcWidth="35.0" fill="DODGERBLUE" height="200.0" layoutX="350.0" layoutY="40.0" stroke="TRANSPARENT" strokeType="INSIDE" width="259.0" />
+                  <Label layoutX="75.0" layoutY="60.0" text="Total Accounts" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="363.0" layoutY="58.0" prefHeight="34.0" prefWidth="232.0" text="Accounts With Profiles" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="255.0" text="Recent Account created:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="75.0" layoutY="101.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="totallabel" text="00" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="80.0" />
+                           </font>
+                        </Label>
+                        <Label text="Accounts" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="363.0" layoutY="101.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="withprofile" text="00" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="80.0" />
+                           </font>
+                        </Label>
+                        <Label text="Accounts" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

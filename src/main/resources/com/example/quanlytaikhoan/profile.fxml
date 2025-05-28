@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Switch2" prefHeight="508.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quanlytaikhoan.controllers.ProfileController">
+   <children>
+      <StackPane prefHeight="510.0" prefWidth="982.0">
+         <children>
+            <Pane fx:id="userprofilepane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E0E1DD;">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#415a77" height="488.0" layoutX="24.0" layoutY="11.0" stroke="TRANSPARENT" strokeType="INSIDE" width="259.0" />
+                  <VBox layoutX="46.0" layoutY="72.0" prefHeight="367.0" prefWidth="216.0" spacing="5.0">
+                     <children>
+                        <Label text="User ID:" textFill="WHITE" />
+                        <TextField fx:id="idprofile" />
+                        <Label text="User's Name:" textFill="WHITE" />
+                        <TextField fx:id="userprofile" />
+                        <Label text="Gender:" textFill="WHITE" />
+                        <ChoiceBox fx:id="genderprofile" prefHeight="26.0" prefWidth="229.0" />
+                        <Label text="Telephone:" textFill="WHITE" />
+                        <TextField fx:id="teleprofile" />
+                        <Label text="Address:" textFill="WHITE" />
+                        <TextArea fx:id="addressprofile" prefHeight="59.0" prefWidth="100.0" />
+                        <Label fx:id="profilelabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="216.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="17.0" prefWidth="216.0" spacing="10.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#Addprofile" styleClass="btnprofile" stylesheets="@Style/button.css" text="Add" textFill="#f1f2f6">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#clearprofile" styleClass="btnprofile" stylesheets="@Style/button.css" text="Clear" textFill="#f1f2f6">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <TableView fx:id="status_table" layoutX="313.0" layoutY="12.0" prefHeight="488.0" prefWidth="259.0" styleClass="rounded-table" stylesheets="@Style/style.css">
+                     <columns>
+                        <TableColumn fx:id="statusid" prefWidth="120.800048828125" styleClass="rounded-table" text="ID" />
+                        <TableColumn fx:id="status_info" minWidth="3.20001220703125" prefWidth="107.20001220703125" styleClass="rounded-table" text="Information" />
+                     </columns>
+                  </TableView>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#415a77" height="232.0" layoutX="594.0" layoutY="13.0" stroke="TRANSPARENT" strokeType="INSIDE" width="356.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#415a77" height="232.0" layoutX="594.0" layoutY="268.0" stroke="TRANSPARENT" strokeType="INSIDE" width="356.0" />
+                  <Label layoutX="619.0" layoutY="31.0" text="User Account" textFill="#e0e1dd">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-100.0" endY="30.5999755859375" layoutX="712.0" layoutY="31.0" startX="-100.0" stroke="#0d1b2a" strokeWidth="2.0" />
+                  <Label layoutX="619.0" layoutY="290.0" text="User Information" textFill="#e0e1dd">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-100.0" endY="30.5999755859375" layoutX="712.0" layoutY="290.0" startX="-100.0" stroke="#0d1b2a" strokeWidth="2.0" />
+                  <HBox layoutX="611.0" layoutY="335.0" prefHeight="124.0" prefWidth="337.0" spacing="5.0">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Label text="User's Name:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Gender:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Telephone:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Address:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="124.0" prefWidth="232.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="namelabel" textFill="#aeb8fe">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="genderlabel" textFill="#aeb8fe">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="telelabel" textFill="#aeb8fe">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="addresslabel" textFill="#aeb8fe">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="611.0" layoutY="72.0" prefHeight="124.0" prefWidth="337.0" spacing="5.0">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Label text="User ID:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Username:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Mail:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Date Created:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="124.0" prefWidth="229.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="idlabel" textFill="#aeb8fe">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="unamelabel" textFill="#aeb8fe">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="maillabel" textFill="#aeb8fe">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="datelabel" textFill="#aeb8fe">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="670.0" layoutY="459.0" prefHeight="38.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#updateprofile" styleClass="btnprofile" stylesheets="@Style/button.css" text="Update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#DeleInfo" styleClass="btnforgot" stylesheets="@Style/button.css" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="UpdateLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="592.0" layoutY="430.0" prefHeight="38.0" prefWidth="356.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
