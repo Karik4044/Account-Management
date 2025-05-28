@@ -51,3 +51,5 @@ After a successful build, you can run the application using Maven:
 
 ```bash
 mvn javafx:run
+
+License This project is licensed under the MIT License - see the LICENSE file for details.
